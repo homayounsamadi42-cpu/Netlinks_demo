@@ -4,17 +4,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    /* 
-      Key changes below:
-      1. Changed 'bg-white' to 'bg-white/75' (semi-transparent background)
-      2. Added 'backdrop-blur-md' to blur the scrolling content behind it
-      3. Kept 'sticky top-0 z-50' to keep it fixed on top as you scroll
-    */
     <nav className="bg-white/75 backdrop-blur-md border-b border-gray-100 font-sans sticky top-0 z-50 transition-all duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          
-          {/* Logo Section */}
           <div className="flex-shrink-0 flex items-center gap-2">
             <svg
               className="w-6 h-6 text-orange-500"
@@ -33,8 +25,6 @@ export default function Navbar() {
               <span className="text-slate-900">links</span>
             </span>
           </div>
-
-          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-7">
             <button className="flex items-center text-[15px] font-medium text-slate-700 hover:text-slate-950 transition-colors gap-1 group">
               Solutions
@@ -64,8 +54,6 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
-
-          {/* Call to Action Button */}
           <div className="hidden md:flex items-center">
             <button className="bg-[#4A2E80] hover:bg-[#3b2366] text-white px-5 py-2.5 rounded-lg text-sm font-medium flex items-center gap-1.5 transition-all shadow-sm">
               Get started

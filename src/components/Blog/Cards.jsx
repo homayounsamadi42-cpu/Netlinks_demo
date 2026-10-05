@@ -11,14 +11,11 @@ export default function CardsList() {
           return (
             <div 
               key={card.id} 
-              /* CHANGED: Removed horizontal 'p-8 md:p-12' and vertical padding from the main wrapper */
               className="group bg-white rounded-[2.5rem] border border-gray-100/70 shadow-[0_4px_25px_-5px_rgba(0,0,0,0.02)] hover:shadow-[0_12px_35px_-5px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 transition-all duration-300 overflow-hidden cursor-pointer"
             >
-              {/* CHANGED: Removed gap completely so the image flushes up against the text container */}
               <div className="flex flex-col md:flex-row items-stretch">
                 
                 {hasImage && (
-                  /* CHANGED: Removed 'rounded-2xl' to let the image flush with the card's main boundaries */
                   <div className="w-full md:w-[38%] h-auto self-stretch flex-shrink-0 overflow-hidden">
                     <img
                       src={card.image}
@@ -27,11 +24,7 @@ export default function CardsList() {
                     />
                   </div>
                 )}
-
-                {/* CHANGED: Added back the padding 'p-8 md:p-12 md:pl-16' directly to this text area */}
                 <div className="flex-1 w-full min-w-0 flex flex-col p-8 md:p-12 md:pl-16 justify-center">
-                  
-                  {/* اطلاعات متا */}
                   <div className="flex items-center gap-2 text-[11px] font-medium text-gray-400 tracking-wider uppercase mb-4">
                     <span>{card.date}</span>
                     <span className="text-gray-300">•</span>
@@ -39,25 +32,18 @@ export default function CardsList() {
                     <span className="text-gray-300">•</span>
                     <span className="text-gray-500 font-semibold">{card.category}</span>
                   </div>
-
-                  {/* عنوان کارت */}
                   <h2 className="text-2xl md:text-[32px] font-bold text-slate-900 leading-[1.25] tracking-tight mb-4 group-hover:text-slate-950 transition-colors">
                     {card.title}
                   </h2>
-
-                  {/* توضیحات کارت */}
                   <p className="text-slate-500 text-sm md:text-[15px] leading-relaxed mb-6 font-normal">
                     {card.description}
                   </p>
-
-                  {/* لینک راهنما */}
                   <div className="mt-4">
                     <span className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-400 group-hover:text-gray-800 transition-colors duration-200">
                       Read 
                       <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
                     </span>
                   </div>
-
                 </div>
               </div>
             </div>

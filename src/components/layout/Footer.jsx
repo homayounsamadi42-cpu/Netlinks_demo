@@ -24,7 +24,7 @@ function Footer() {
         <ul className=''>
           <li className='text-gray-400'>Sulotion</li>
           <li><a href="">CRM</a></li>
-          <li><a href=""></a></li>
+          <li><a href="">services</a></li>
           <li><a href="">CRM</a></li>
           <li><a href="">CRM</a></li>
           <li><a href="">CRM</a></li>
